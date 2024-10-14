@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link href="https://fonts.cdnfonts.com/css/chicken-pie-height" rel="stylesheet">
+    <link rel="icon" href="img/love-birds.png">
+    <title>¡Felices 5 años!</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <container class="greetings">
+        <div class="all-text">
+            <h1 class="hello-m">BABYYYY</h1>
+            <h2 class="today-anniversary">HOY HACEMOS 5 AÑOSS</h2>
+        </div>
+    </container>
+    <div class="container">
+        <p id="click-text">Pulsa aquí</p>
+        <div class="arrow">↓</div>
+        <a class="heart" role="button" href="three-years.html"></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS("particles-js", {
+          "particles": {
+            "number": {
+              "value": 70, // Número de partículas
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ff0044" // Color de las partículas (corazones)
+            },
+            "shape": {
+              "type": "image", // Forma de las partículas
+              "image": {
+                "src": "img/love.png", // Imagen de las corazón
+              }
+            },
+            "opacity": {
+              "value": 0.8,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 10, // Tamaño de las partículas
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": false
+            },
+            "move": {
+              "enable": true,
+              "speed": 7, // Velocidad de movimiento
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse" // Reacción al pasar el ratón sobre las partículas
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push" // Al hacer clic, se añaden más partículas
+              },
+              "resize": true
+            },
+            "modes": {
+              "repulse": {
+                "distance": 100,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              }
+            }
+          },
+          "retina_detect": true
+        });
+      </script>
+      
+</body>
+
+</html>
