@@ -9,8 +9,7 @@ html {
 }
 
 :root{
-    --pink: #ff74a4;
-    --violet: #9f6ea3;
+    --violet: #aa26b6;
     --lightblack: #515C6F;
     --white: #ffffff;
     --darkwhite: #cecaca;
@@ -70,7 +69,6 @@ section {
 #welcome {
     height: 100vh;
     background-color: rgb(122, 20, 64);
-    background: url('img/claveles.webp') no-repeat center center;
     background-size: cover; 
 }
 
