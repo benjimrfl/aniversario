@@ -5,7 +5,9 @@ const data = {
     "2019": {
         "Octubre": {
             image: "img/2019-10.jpg", // Cambia estas rutas a tus imágenes
-            description: "Octubre 2019."
+            description: "Martes 15 de octubre. Esta fue la primera foto que me enviaste, recuerdo que me quedé tipo  \
+            WTF? man porque me manda esta foto? Y encima después ese dia nos fuimos a comer juntos.\
+            Donde empezó todo ✨✨"
         },
         "Noviembre": {
             image: "img/2019-11.jpg",

@@ -12,6 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet"
@@ -25,13 +26,19 @@
 <body>
 
     <section id="welcome">
-        <div class="couple">
-            <img src="img/propuesto.png" alt="">
+
+        <div id="contador">
+            <h1 class="contador-titulo">Han pasado:</h1>
+            <p id="time-counter"></p>
         </div>
+
         <div class="dark-blur">
             <div class="titulos">
                 <h1 class="this-gift">Y este es tu regalo<br />por nuestro 5to aniversario</h1>
                 <h3 class="with-love">Está hecho con mucho amor y esfuerzo</h3>
+            </div>
+            <div class="couple">
+                <img src="img/propuesto.png" alt="">
             </div>
         </div>
     </section>
@@ -41,6 +48,12 @@
         .desktop_3 {
             max-width: 100%;
             margin: auto;
+            background: linear-gradient(to bottom, rgb(218, 150, 179) 0%, rgb(61, 1, 58) 100%);
+        }
+
+        .desktop_3 .swiper-container.mySwiper {
+            padding-bottom: 50px;
+            max-width: 100%;
         }
 
         .desktop_3 h1 {
@@ -50,23 +63,26 @@
         /* Botones para seleccionar el año */
         .year-buttons {
             display: flex;
+            align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 20px;
+            margin-top: 20px;
             margin-bottom: 30px;
         }
 
         .year-btn {
             padding: 15px 20px;
-            background-color: #007bff;
+            background-color: #007bff00;
             color: #fff;
-            border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s;
+            flex-shrink: 0;
         }
 
         .year-btn:hover {
-            background-color: #0056b3;
+            background-color: #9bc5c575;
         }
 
         /* Estilo de la galería de imágenes */
@@ -87,8 +103,8 @@
         .swiper-button-prev,
         .swiper-button-next {
             color: white;
-            font-size: 2rem;
-            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 10rem;
+            background-color: rgba(0, 0, 0, 0);
             border-radius: 50%;
             padding: 10px;
             position: absolute;
@@ -105,8 +121,40 @@
             right: 10px;
         }
 
+        .swiper-slide.swiper-slide-active {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .swiper-slide.swiper-slide-active p {
+            font-family: 'Spectral bold', serif;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
         /* Adaptaciones móviles */
         @media (max-width: 768px) {
+
+            .year-buttons {
+                gap: 10px;
+            }
+
+            .year-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
 
             .swiper-button-prev,
             .swiper-button-next {
@@ -117,7 +165,7 @@
     </style>
 
     <section class="desktop_3" id="gallery">
-        <h1>Elige un año</h1>
+        <h1 class="this-gift">Elige un año</h1>
 
         <div class="year-buttons">
             <button class="year-btn" data-year="2019">2019</button>
@@ -144,17 +192,7 @@
 
 
 
-    <section id="poem">
-
-        <div class="cinnamonroll">
-            <img src="img/cina.png" alt="cinnamonroll">
-        </div>
-
-        <div class="half-moon">
-            <a href="files/asmr-1.m4a" download="asmr">
-                <img src="img/Recurso 21@2x.png" alt="moon">
-            </a>
-        </div>
+    <!-- Poem  <section id="poem">
 
         <img src="img/carta.png" alt="envelope">
 
@@ -231,8 +269,11 @@
 
     </section>
 
+-->
+
     <script src="nav.js"></script>
     <script src="app.js"></script>
+    <script src="counter.js"></script>
 
 </body>
 
