@@ -26,51 +26,72 @@ const data = {
     "2020": {
         "Enero": {
             image: "img/2020-01.jpg",
-            description: "Enero 2020."
+            description: "Miércoles 1 de enero. Nuestro primer año nuevo. Aún recuerdo la cara de todo el \
+            mundo mientras nos echábamos la foto 🫨🫨. Fue el comienzo de un año rarete (covid), pero \
+            comenzar los años contigo es lo mejor que me ha podido pasar. ¿¿Que hace al lado el RAMÓN??"
         },
         "Febrero": {
             image: "img/2020-02.jpg",
-            description: "Febrero 2020."
+            description: "Martes 25 de febrero. ME ENCANTA ESTA FOTO, LA LENGUITA. No es nada romantica \
+            pero es que no todas las fotos van a ser románticas. Parece que esta es una de nuestras primeras \
+            videollamadas, ¿qué haríamos ahora sin ellas?"
         },
         "Marzo": {
             image: "img/2020-03.jpg",
-            description: "Marzo 2020."
+            description: "Viernes 6 de marzo. Una de nuestras ultimas fotos antes del confinamiento. \
+            Creo que simplemente hacíamos el tonto en tu casa, pero hacer el tonto contigo \
+            me llena el corazoncito. 🥰🥰"
         },
         "Abril": {
             image: "img/2020-04.jpg",
-            description: "Abril 2020."
+            description: "Miércoles 1 de abril. ESTA FOTO NO PODÍA FALTAR POR DIOS. Necesito que mis \
+            hijos vean esta foto. Además en abril también te hiciste el flequillo, pero obviamente esta \
+            foto se lleva el premio."
         },
         "Mayo": {
             image: "img/2020-05.jpg",
-            description: "Mayo 2020."
+            description: "Lunes 11 de mayo. No sé que pasó este día la verdad, pero tenemos un montón de fotos, \
+            además que sales preciosa con tu flequillito (en otras sales con moño y es tipo 🤤🤤🤤🤤)"
         },
         "Junio": {
             image: "img/2020-06.jpg",
-            description: "Junio 2020."
+            description: "Viernes 19 de junio. Fuimos a celebrar nuestro messiversario a las vias (cuando se podía entrar XD, \
+            2024 y seguimos sin tranvía) a comernos un buen bol de patatas cheddar boffff. \
+            Además, estaba luchando contra la leucemia 😔😔"
         },
         "Julio": {
             image: "img/2020-07.jpg",
-            description: "Julio 2020."
+            description: "Viernes 31 de julio. Creo recordar que estabamos celebrando el cumple de Cris y \
+            era una pijamada. La foto es black cum face, no recomendado, se puede ver en mi cara. Pero bueno, \
+            también fue de nuestras primeras pijamadas juntitos 👩‍❤️‍💋‍👨"
         },
         "Agosto": {
             image: "img/2020-08.jpg",
-            description: "Agosto 2020."
+            description: "Sábado 15 de agosto. Esta foto es de cuando estaba en el campa de escuelita y te quedaste \
+            con el churribeio ese finde. Creo que a partir de este momento es cuando cae enamorado de tí, \
+            igual que su dueñoo."
         },
         "Septiembre": {
             image: "img/2020-09.jpg",
-            description: "Septiembre 2020."
+            description: "Miércoles 2 de septiembre. TE HICISTE LAS MECHAS POR PRIMERA VEZ, QUEEEEEEEEEEEEEEE? \
+            Y ESTE PIBONAZOOOO?????? 🤤🤤🤤🤤🤤🤤🤤🤤 (además llevas un kiki)"
         },
         "Octubre": {
             image: "img/2020-10.jpg",
-            description: "Octubre 2020."
+            description: "Sábado 17 de octubre. Sólo los reals recuerdan este día. Primer aniversariooo, fuimos a \
+            pasear por Sevilla y a montarnos al barquito. Después fuimos a la Gorda a cenar. Fue día gooooooood, \
+            además iba estrenando lupas."
         },
         "Noviembre": {
             image: "img/2020-11.jpg",
-            description: "Noviembre 2020."
+            description: "Sábado 21 de noviembre. Cumplías 18 babyyy, es la mejor foto que he encontrado, te \
+            regalaron tu blazer negra con la que empezaste a ser astetik. Me siento el hombre más afortunado del mundo \
+            de poder verte soplar las velas año tras año. Te amo 🫶"
         },
         "Diciembre": {
             image: "img/2020-12.jpg",
-            description: "Diciembre 2020."
+            description: "Miércoles 16 de diciembre. Tenemos muchas fotos de estas navidades, no sé ni que pasó ese día, \
+            pero la pongo simplemente por que se me cae la baba contigo 🤤. Nada más que añadir señoría."
         }
     },
     "2021": {
