@@ -11,11 +11,16 @@ const data = {
         },
         "Noviembre": {
             image: "img/2019-11.jpg",
-            description: "Noviembre 2019."
+            description: "Domingo 10 de noviembre. Esta foto es de después de un ensayo del musical \
+            yo recuerdo que me fui para casa para no se qué, pero tu te fuiste con esta gente a casa de la rebe \
+            y me llegó esta foto por la noche. Quedé así: 🤤🤤"
         },
         "Diciembre": {
             image: "img/2019-12.jpg",
-            description: "Diciembre 2019."
+            description: "Domingo 15 de diciembre. El autocompletado de mi programa donde estoy escribiendo \
+            dice que esta es 'La mejor foto de mi vida', y perfectamente podría serlo, porque es nuestra primera \
+            foto juntos. Podría poner cualquier otra de esas navidades, donde te ves increiblee, pero no podía \
+            dejar esta atrás. Te amo 🫶"
         }
     },
     "2020": {
@@ -262,19 +267,22 @@ const data = {
     }
 };
 
-const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
+let swiper;
+
+function adjustImageMargin(img) {
+    img.onload = function () {
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+
+        if (height > width) {
+            // Imagen vertical
+            img.style.marginTop = "70px";  // Ajusta este valor según sea necesario
+        } else {
+            // Imagen horizontal
+            img.style.marginTop = "40px";  // Ajusta este valor según sea necesario
+        }
+    }
+}
 
 // Evento al hacer clic en un botón de año
 yearButtons.forEach(button => {
@@ -291,16 +299,35 @@ yearButtons.forEach(button => {
 
             const img = document.createElement('img');
             img.src = data[selectedYear][month].image;
+            adjustImageMargin(img);
 
             const description = document.createElement('p');
             description.textContent = data[selectedYear][month].description;
+            description.classList.add('swiper-description');
 
             slide.appendChild(img);
             slide.appendChild(description);
             swiperWrapper.appendChild(slide);
         }
 
-        // Actualizar Swiper después de añadir las nuevas diapositivas
-        swiper.update();
+        // Destruir el Swiper anterior si ya existe
+        if (swiper) {
+            swiper.destroy();
+        }
+
+        // Inicializar Swiper de nuevo con las nuevas diapositivas
+        swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
     });
 });

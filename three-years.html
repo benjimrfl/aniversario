@@ -13,6 +13,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet"
@@ -20,6 +21,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="three-years.css">
+    <link rel="stylesheet" href="coding_seru.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>5 AÑOS DE AMOR</title>
 </head>
 
@@ -41,128 +44,29 @@
                 <img src="img/propuesto.png" alt="">
             </div>
         </div>
+
+        <div class="container">
+            <div class="valentines">
+                <div class="envelope"></div>
+                <div class="front"></div>
+                <div class="card">
+                    <div class="text">Feliz</br> Aniversario</div>
+                    <div class="heart"></div>
+                    <div class="text"></br></br>Pulsa aqui</div>
+                </div>
+            </div>
+        </div>
+        <script src="coding_seru.js"></script>
+
+        <div id="modalTexto" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Tu Carta</h2>
+              <p class="carta" id="textoMostrar">Este es el texto que se mostrará cuando 
+                pulses sobre la carta.</p>
+            </div>
+          </div>
     </section>
-
-    <style>
-        /* Ajuste general */
-        .desktop_3 {
-            max-width: 100%;
-            margin: auto;
-            background: linear-gradient(to bottom, rgb(218, 150, 179) 0%, rgb(61, 1, 58) 100%);
-        }
-
-        .desktop_3 .swiper-container.mySwiper {
-            padding-bottom: 50px;
-            max-width: 100%;
-        }
-
-        .desktop_3 h1 {
-            text-align: center;
-        }
-
-        /* Botones para seleccionar el año */
-        .year-buttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        .year-btn {
-            padding: 15px 20px;
-            background-color: #007bff00;
-            color: #fff;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            flex-shrink: 0;
-        }
-
-        .year-btn:hover {
-            background-color: #9bc5c575;
-        }
-
-        /* Estilo de la galería de imágenes */
-        .swiper-container.mySwiper {
-            width: 100%;
-            height: 500px;
-            position: relative;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            /* Cambiado a 'contain' para que la imagen no se salga del contenedor */
-        }
-
-        /* Botones de navegación de Swiper */
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: white;
-            font-size: 10rem;
-            background-color: rgba(0, 0, 0, 0);
-            border-radius: 50%;
-            padding: 10px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .swiper-button-prev {
-            left: 10px;
-        }
-
-        .swiper-button-next {
-            right: 10px;
-        }
-
-        .swiper-slide.swiper-slide-active {
-            margin-top: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .swiper-slide.swiper-slide-active p {
-            font-family: 'Spectral bold', serif;
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            padding: 15px;
-            background-color: white;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            display: inline-block;
-            max-width: 80%;
-        }
-
-        /* Adaptaciones móviles */
-        @media (max-width: 768px) {
-
-            .year-buttons {
-                gap: 10px;
-            }
-
-            .year-btn {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                font-size: 1.5rem;
-                padding: 7px;
-            }
-        }
-    </style>
 
     <section class="desktop_3" id="gallery">
         <h1 class="this-gift">Elige un año</h1>
@@ -183,97 +87,20 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-    </section>
-
-    <!-- Incluye el JS de Swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="gallery.js"></script>
 
 
+        <!-- Incluye el JS de Swiper -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Poem  <section id="poem">
-
-        <img src="img/carta.png" alt="envelope">
-
-        <h2>Versos de Tres Años:<br />Nuestra Historia <br />Bajo la Luna</h2>
-
-        <div class="poem-page">
-            <div class="poem-text">
-                <p>En un junio pandémico nos empezamos a conocer <br />
-                    Aunque lejos, el amor es lo fundamental. <br />
-                    Yo un argentino idiota vos una chilena hermosa <br />
-                    Fronteras no importan, solo queremos amar. <br /></p>
-
-                <p>En diciembre, la luna nos unió con su brillo, <br />
-                    Miradas conectadas, en un momento sencillo. <br />
-                    El 28 marcó un instante marcó un hito, <br />
-                    Bajo la luna, el destino se construyó bonito. <br /></p>
-
-                <p>Pero el 12 de enero, dude en mi ser, <br />
-                    Pensé que el camino iba a perecer. <br />
-                    Rechazo en el aire, un eco de temor, <br />
-                    Pero el destino tenía otro rumbo, sin error. <br /></p>
-
-                <p>El día más importante, el 20 de febrero llegó, <br />
-                    Nervios en el aire, mi corazón tembló. <br />
-                    De extrovertido a tímido, en minutos cambié, <br />
-                    Solo vos cambias mi ser, lo demostraste bien. <br /></p>
-
-                <p>Tres años pasaron, como un sueño veloz, <br />
-                    En este viaje sin escalas, juntos hemos volado, <br />
-                    No es poco, es un universo que juntos creamos, <br />
-                    Pero no quiero detenerme, quiero seguir a tu lado. <br /></p>
-
-                <p>No quiero que otro año pase sin poderte ver, <br />
-                    Quiero sentirte cerca, cada amanecer. <br />
-                    Prometo darlo todo, construir un futuro juntos, <br />
-                    Celebrar el cuarto año, entre abrazos profundos. <br /></p>
-
-                <p>Sos el amor de mi vida, convivir es mi deseo, <br />
-                    No me quedaré con ganas, te lo aseguro. <br />
-                    Tres años de historia, solo es el principio, <br />
-                    Que el tiempo nos regale un <a href="files/packsito.zip" download="packsito c:">amor</a>
-                    eterno.<br /></p>
-
-            </div>
-        </div>
+        <script src="gallery.js"></script>
 
     </section>
-
-
-
-    <section id="love-letter">
-
-        <div class="moon"> <a href="files/asmrcito.m4a" download=""><img src="img/Recurso 18@2x.png" alt=""></a></div>
-
-        <div class="card">
-            <h2 class="love-letter-title">FELIZ TERCER ANIVERSARIO <span class="love-letter-title-two">MI AMOR DE MI
-                    VIDA </span></h2>
-            <p class="card-content">Espero que te haya gustado el regalo; lo hice con todas las ganas. Te amo demasiado,
-                y creo que es obvio porque siempre te digo. Pero no me canso ni me voy a cansar de expresarte lo mucho
-                que te amo y te aprecio.
-            <p class="card-content">Sos lo mejor que me paso en la vida, te amo mucho, disculpa si te pareció algo
-                mediocre el regalo pero enserio lo hice con todas las ganas y siempre pensando en cómo te puede gustar
-                más, creo que me expresé bastante sobre lo mucho que te amo con todo lo que te dije pero no quiero dejar
-                pasar el detalle de que voy a hacer lo que sea para que seamos felices juntos, y podamos construir una
-                familia.</p>
-            <p class="card-content">Se que lo repito mucho pero es muy importante para mi y espero que para vos tambien
-                quiero que seas parte de mi familia, te aseguro que vamos a superar todos los problemas que se opongan
-                por mas grandes que sean, porque el amor que nos tenemos no es igual al de ninguna otra pareja.</p>
-            <p class="card-content">Te amo mucho macarena estos ultimos 3 años fueron los mejores de mi vida, sin
-                dudarlo dos veces, lo puedo afirmar y decirte gracias por todo lo que me diste y todo lo que me das, y
-                de nuevo, no me voy a quedar con estas ganas, te voy a ir a buscar y voy a llenar de besos esa carita
-                que tenes mi amor de mi vida.</p>
-        </div>
-
-    </section>
-
--->
 
     <script src="nav.js"></script>
     <script src="app.js"></script>
     <script src="counter.js"></script>
+
+
 
 </body>
 
