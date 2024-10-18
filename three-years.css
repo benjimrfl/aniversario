@@ -21,6 +21,10 @@ section {
   transition: transform 0.5s ease-in-out;
 }
 
+body, html {
+  overflow-x: hidden; /* Evitar desplazamiento horizontal */
+}
+
 body {
   background-color: rgb(218, 150, 179);
 }
@@ -37,27 +41,28 @@ body {
 }
 
 .contador-titulo {
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
 }
 
 #contador {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.418);
-  padding: 10px 20px;
+  padding: 15px 30px;
   border-radius: 20px;
   font-family: "Montserrat", sans-serif;
   color: #ffd700;
   z-index: 100;
   text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Agrega sombra para destacar */
 }
 
 #time-counter {
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #ffd700;
 }

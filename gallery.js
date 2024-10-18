@@ -305,6 +305,13 @@ function adjustImageMargin(img) {
     }
 }
 
+// Función para mantener la posición de desplazamiento actual
+function preventPageScroll() {
+    // Obtener la posición actual de desplazamiento
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    window.scrollTo(0, scrollTop);  // Mantener la posición fija
+}
+
 // Evento al hacer clic en un botón de año
 yearButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -333,7 +340,7 @@ yearButtons.forEach(button => {
 
         // Destruir el Swiper anterior si ya existe
         if (swiper) {
-            swiper.destroy();
+            swiper.destroy(true, true);  // Eliminar completamente el Swiper y sus eventos
         }
 
         // Inicializar Swiper de nuevo con las nuevas diapositivas
@@ -350,5 +357,19 @@ yearButtons.forEach(button => {
                 clickable: true,
             },
         });
+
+        // Agregar preventDefault en los nuevos botones de navegación
+        document.querySelectorAll('.swiper-button-prev, .swiper-button-next').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();  // Prevenir el comportamiento predeterminado de navegación
+                preventPageScroll();  // Mantener la página en la posición actual al navegar
+            });
+        });
+
+        // Desactivar temporalmente el scroll suave durante las transiciones de Swiper
+        document.documentElement.style.scrollBehavior = 'auto';
+        setTimeout(() => {
+            document.documentElement.style.scrollBehavior = '';  // Restaurar el scroll suave
+        }, 700);  // Tiempo que dura la transición de Swiper
     });
 });
